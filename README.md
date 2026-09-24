@@ -428,8 +428,31 @@ docker compose down
 # Dashboard
 
 The Streamlit dashboard provides a centralized view of the machine.
+# Dashboard
+
+The Streamlit dashboard provides a centralized view of the machine.
+
+## Dashboard Preview
+
+### Main Dashboard
+
+![AIoT Dashboard Overview](screenshots/dashboard-overview.png)
+
+### Machine Monitoring
+
+![Machine Monitoring](screenshots/machine-monitoring.png)
+
+### Analytics and Predictive Maintenance
+
+![Analytics](screenshots/analytics.png)
+
+### Sensor Trends
+
+![Sensor Trends](screenshots/sensor-trends.png)
+
 
 ### System Overview
+
 
 Displays:
 
