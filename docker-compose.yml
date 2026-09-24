@@ -1,0 +1,31 @@
+services:
+
+  api:
+    build: .
+    container_name: aiot-api
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    command: uvicorn api:app --host 0.0.0.0 --port 8000
+
+  mqtt-publisher:
+    build: .
+    container_name: aiot-mqtt-publisher
+    command: python mqtt_publisher.py
+
+  mqtt-mongodb:
+    build: .
+    container_name: aiot-mqtt-mongodb
+    env_file:
+      - .env
+    command: python -u mqtt_to_mongodb.py
+
+  dashboard:
+    build: .
+    container_name: aiot-dashboard
+    ports:
+      - "8501:8501"
+    environment:
+      - API_URL=http://api:8000
+    command: streamlit run dashboard.py --server.address=0.0.0.0 --server.port=8501
