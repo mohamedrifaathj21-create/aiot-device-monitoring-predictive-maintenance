@@ -257,7 +257,7 @@ Never publish your real MongoDB connection string, username, password, API keys,
 ### 1. Clone the repository
 
 ```bash
-git clone <your-github-repository-url>
+git clone https://github.com/mohamedrifaathj21-create/aiot-device-monitoring-predictive-maintenance.git
 cd aiot-device-simulator
 ```
 
